@@ -1,20 +1,21 @@
-# CST1510 - Upload all weekly coursework
-# Worksheets, walkthroughs, and LAB folders are allowed
+# Ignore everything by default
+*
 
-# Python virtual environments
+# Allow folders so Git can find selected files
+!*/
+
+# Allow all Jupyter worksheets
+!*.ipynb
+
+# Allow everything inside weekly LAB folders
+!Week */LAB/**
+
+# Never upload unnecessary files
 .venv/
 venv/
-
-# Python cache
 __pycache__/
 *.pyc
-
-# Jupyter checkpoints
 .ipynb_checkpoints/
-
-# macOS system files
-__MACOSX/
 .DS_Store
-
-# Environment secrets
+__MACOSX/
 .env
