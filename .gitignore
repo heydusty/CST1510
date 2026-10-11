@@ -1,11 +1,20 @@
-# Learning material: only each week's LAB folder is uploaded
-Week */*
-!Week */LAB/
+# CST1510 - Upload all weekly coursework
+# Worksheets, walkthroughs, and LAB folders are allowed
 
-# Files that should never be uploaded
+# Python virtual environments
 .venv/
+venv/
+
+# Python cache
 __pycache__/
+*.pyc
+
+# Jupyter checkpoints
 .ipynb_checkpoints/
+
+# macOS system files
 __MACOSX/
 .DS_Store
+
+# Environment secrets
 .env
