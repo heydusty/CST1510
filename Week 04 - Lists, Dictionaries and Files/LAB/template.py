@@ -19,7 +19,22 @@ Delete these instructions as you replace them with your code.
 #    nothing outside it should contain a print() of its own. Give each a
 #    one-line docstring.
 
-# your function(s) go here
+def check_record(value, limit):
+    """Work out the difference, percent and status for one server."""
+    difference = value - limit
+    percent = (value / limit) * 100
+    if percent >= 100:
+        status = "OVER LIMIT"
+    elif percent >= 90:
+        status = "WARNING"
+    else:
+        status = "OK"
+    return difference, percent, status
+
+
+def print_report(label, difference, percent, status):
+    """Print one line of the report for a server."""
+    print(f"{label}: {difference} GB, {percent:.1f}%, {status}")
 
 
 # ====================================================================== STORE
@@ -33,7 +48,11 @@ Delete these instructions as you replace them with your code.
 #    Excellent : also write the results out to a new file (one line per
 #                record: label, status), as well as printing them.
 
-records = []   # replace with your code
+records = [
+    {"label": "srv-01", "value": 87, "limit": 120},
+    {"label": "srv-02", "value": 125, "limit": 120},
+    {"label": "srv-03", "value": 110, "limit": 120},
+]
 
 
 # =============================================================== PROCESS + OUTPUT
@@ -42,7 +61,9 @@ records = []   # replace with your code
 #    Excellent : also keep a running count of how many were OVER LIMIT, and
 #                print that once, after the loop ends.
 
-# your loop goes here
+for record in records:
+    difference, percent, status = check_record(record["value"], record["limit"])
+    print_report(record["label"], difference, percent, status)
 
 
 # ==========================================================================
