@@ -1,0 +1,4 @@
+web-server,87,120
+mail-server,115,120
+db-server,130,120
+backup-server,60,250
