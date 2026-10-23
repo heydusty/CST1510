@@ -11,4 +11,4 @@ class Record:
         return "OVER LIMIT" if self.value > self.limit else "OK"
 
 r = Record("R-001", 120.0, 100.0)
-print(status())
+print(r.status())
