@@ -1,0 +1,8 @@
+hostname,used_gb,total_gb
+srv-01,87,120
+srv-02,230,250
+db-01,470,500
+web-01,40,100
+mail-01,160,200
+backup-01,900,1000
+cache-01,20,64
