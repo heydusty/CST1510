@@ -8,20 +8,20 @@ Date  :  3 October 2026
 
 Run it:   python template.py
 
-Checks how full a server's disk is. Type "quit" as the hostname to stop.
+
 """
 
 over_limit_count = 0
 
 while True:
-    # ================================================================ INPUT
+  
     hostname = input("Hostname (or quit) : ")
     if hostname == "quit":
         break
     gb_used = float(input("GB used            : "))
     gb_total = float(input("GB total           : "))
 
-    # ============================================================== PROCESS
+    
     gb_free = gb_total - gb_used
     percent_used = (gb_used / gb_total) * 100
 
@@ -33,7 +33,7 @@ while True:
     else:
         status = "OK"
 
-    # =============================================================== OUTPUT
+    
     print()
     print("=" * 34)
     print(f"  RECORD CHECK  -  {hostname}")
