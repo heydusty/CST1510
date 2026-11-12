@@ -1,0 +1,6 @@
+  Srv-01 , used=87 , total=100  
+WEB-02,USED=95,TOTAL=100
+ db-03 ,  used = 120 , total=100
+Cache-04,Used=40,  Total=80   
+   MAIL-05 , USED=180 , total = 200
+backup-06,used=10,total=500
