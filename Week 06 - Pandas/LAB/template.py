@@ -39,7 +39,7 @@ print(status_counts)
 
 servers.to_csv("servers_report.csv", index=False)
 
-# One bar chart of the counts per status, saved as a PNG
+
 status_counts.plot(kind="bar", title="Servers per status")
 plt.ylabel("Number of servers")
 plt.tight_layout()
